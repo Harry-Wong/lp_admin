@@ -2,17 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>摄影师-我的个人信息</title>
+    <title>摄影师-拍摄服务</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
-    <link href="bootstrap/css/lvpaizhe-admin.css" rel="stylesheet" type="text/css" />    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
     <!-- FontAwesome 4.3.0 -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Ionicons 2.0.0 -->
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />    
     <!-- Theme style -->
     <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="bootstrap/css/lvpaizhe-admin.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
          folder instead of downloading all of them to reduce the load. -->
     <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
@@ -291,7 +292,6 @@
             </div>
             <div class="pull-left info">
               <p>王君毅</p>
-
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -321,15 +321,15 @@
                 <span class="label label-primary pull-right">4</span>
               </a>
             </li>
-            <li class="active">
+            <li>
               <a href="photographer_info.html">
                 <i class="fa fa-edit"></i> 
                 <span>我的个人信息</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
-            <li>
-              <a href="photographer_goods.html">
+            <li class="active">
+              <a href="#">
                 <i class="fa fa-camera"></i>
                 <span>拍摄服务</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -359,12 +359,13 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            我的个人信息
-            <small>请保持个人信息及时更新</small>
-          </h1>
+            拍摄服务
+            <small>拍摄服务管理</small>            
+          </h1>          
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">我的个人信息</li>
+            <li class="active">拍摄服务</li>    
+            <li class="active">发布新的服务</li>        
           </ol>
         </section>
 
@@ -375,57 +376,93 @@
             <div class="col-xs-12">
               <div class="box box-primary lvpaizhe-a-info-padding">
                 <div class="row">
-                  <div class="col-xs-8">
+                  <div class="col-xs-12">
                     <!-- form start -->
                     <form class="form-horizontal"  role="form">
+                      <!-- 标题 -->
                       <div class="form-group">
-                        <label for="inputRealname" class="col-sm-3 control-label">真实姓名</label>
+                        <label for="inputGoodTitle" class="col-sm-2 control-label">标题</label>
                         <div class="col-sm-4">
-                          <input type="text" class="form-control" id="inputRealname" >
+                          <input type="text" class="form-control" id="inputGoodTitle">
                         </div>
                         <div class="col-sm-5">
-                          <span id="helpBlock" class="help-block">请填写真实姓名，与有效证件保持一致</span>
+                          <span id="helpBlock" class="help-block">限制30汉字或60字符</span>
+                        </div>
+                      </div>
+                      <!-- 拍摄地 -->
+                      <div class="form-group">
+                        <label for="inputPlace" class="col-sm-2 control-label">拍摄地</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control" id="inputPlace">
+                        </div>                        
+                        <div class="col-sm-3 col-md-offset-2">
+                          <span id="helpBlock" class="help-block"><button type="submit" class="btn btn-primary">设置</button></span>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputSex" class="col-sm-3 control-label">性别</label>
-                        <div class="col-sm-2 radio">
+                        <label for="inputType" class="col-sm-2 control-label">拍摄类型</label>                       
                           <label>
-                            <input type="radio" class="minimal" name="optionsRadios" id="inputSex" value="option1" checked="">
-                            男
+                            <input type="radio" class="minimal " name="optionsRadios"  value="option1" checked="">
+                            婚纱摄影
                           </label>
-
-                        </div>
-                        <div class="col-sm-2 radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="inputSex" value="option2">
-                            女
+                            <input type="radio" class="minimal col-sm-2" name="optionsRadios"  value="option2">
+                            旅行跟拍
+                          </label>
+                          <label>
+                            <input type="radio" class="minimal col-sm-2" name="optionsRadios"  value="option3">
+                            上门拍
+                          </label>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputService" class="col-sm-2 control-label">提供项目</label>
+                        <div class="col-sm-2 checkbox box-body">         
+                          <label>
+                            <input type="checkbox" class="minimal" checked/>
+                          </label>
+                            <span class="fa fa-fw fa-truck"></span>
+                            当地用车
+                          </label>               
+                          <label>
+                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option1" checked="">
+                              <span class="fa fa-fw fa-truck"></span>
+                            当地用车
                           </label>
                         </div>
-                        <div class="col-sm-5">
-                          <span id="helpBlock" class="help-block">请填写性别</span>
+                        <div class="col-sm-2 checkbox">
+                          <label>
+                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                              <span class="fa fa-fw fa-female"></span>
+                            服装
+                          </label>
+                        </div>
+                        <div class="col-sm-2 checkbox">
+                          <label>
+                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                              <span class="fa fa-fw fa-video-camera"></span>
+                            视频
+                          </label>
+                        </div>
+                        <div class="col-sm-2 checkbox">
+                          <label>
+                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                              <span class="glyphicon glyphicon-scissors"></span>
+                            化妆造型
+                          </label>
+                        </div>
+                        <div class="col-sm-2 checkbox">
+                          <label>
+                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                              <span class="glyphicon glyphicon-bed"></span>
+                            酒店
+                          </label>
+                        </div>
+                        <div class="col-sm-2">
+                          <span id="helpBlock" class="help-block"><button type="submit" class="btn btn-primary">全选</button></span>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputEmail" class="col-sm-3 control-label">电子邮箱</label>
-                        <div class="col-sm-4">
-                          <input type="email" class="form-control" id="inputEmail">
-                        </div>
-                        <div class="col-sm-5">
-                          <span id="helpBlock" class="help-block">请填写您的常用邮箱</span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputMobile" class="col-sm-3 control-label">手机</label>
-                        <div class="col-sm-4">
-                          <input type="tel" class="form-control" id="inputMobile"  placeholder="000 0000 0000">
-                        </div>
-                        <div class="col-sm-5">
-                          <span id="helpBlock" class="help-block">为保证您及时接收到重要信息，请正确填写手机号码</span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputDate" class="col-sm-3 control-label">出生日期</label>
+                        <label for="inputDate" class="col-sm-2 control-label">出生日期</label>
                         <div class="col-sm-4">
                           <input type="tel" class="form-control" id="inputDate"  placeholder="yyyy/mm/dd">
                         </div>
@@ -434,7 +471,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputLocation" class="col-sm-3 control-label">所在地</label>
+                        <label for="inputLocation" class="col-sm-2 control-label">所在地</label>
                         <div class="col-sm-4">
                           <input type="tel" class="form-control" id="inputLocation">
                         </div>
@@ -443,7 +480,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputMobile" class="col-sm-3 control-label">个人简介</label>
+                        <label for="inputMobile" class="col-sm-2 control-label">个人简介</label>
                         <div class="col-sm-8">
                           <textarea class="form-control" rows="4" placeholder="字数限制：***"></textarea>
                         </div>
@@ -456,21 +493,6 @@
                       <div class="box-footer">
                         <button type="submit" class="btn btn-primary">保存</button>
                       </div>
-                    </form>
-                  </div>
-                  <div class="col-xs-4">
-                    <form class="form-inline" role="form">
-                      <div>
-                        <img src="dist/img/user1-128x128.jpg">
-                      </div>
-                      <div class="box-body">                        
-                        <div class="form-group">                      
-                          <input type="file" id="exampleInputFile">
-                          <p class="help-block">选择头像上传</p>
-                        </div>                      
-                      </div><!-- /.box-body -->
-
-
                     </form>
                   </div>
                 </div>
