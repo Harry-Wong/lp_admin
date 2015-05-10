@@ -39,7 +39,6 @@
   </head>
   <body class="skin-blue">
     <div class="wrapper">
-      
       <header class="main-header">
         <!-- Logo -->
         <a href="index2.html" class="logo"><b>旅拍者后台管理系统</b></a>
@@ -373,131 +372,151 @@
         <section class="content">
           <!-- Small boxes (Stat box) -->
           <div class="row">
-            <div class="col-xs-12">
-              <div class="box box-primary lvpaizhe-a-info-padding">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <!-- form start -->
-                    <form class="form-horizontal"  role="form">
-                      <!-- 标题 -->
-                      <div class="form-group">
-                        <label for="inputGoodTitle" class="col-sm-2 control-label">标题</label>
-                        <div class="col-sm-4">
-                          <input type="text" class="form-control" id="inputGoodTitle">
-                        </div>
-                        <div class="col-sm-5">
-                          <span id="helpBlock" class="help-block">限制30汉字或60字符</span>
-                        </div>
-                      </div>
-                      <!-- 拍摄地 -->
-                      <div class="form-group">
-                        <label for="inputPlace" class="col-sm-2 control-label">拍摄地</label>
-                        <div class="col-sm-4">
-                          <input type="text" class="form-control" id="inputPlace">
-                        </div>                        
-                        <div class="col-sm-3 col-md-offset-2">
-                          <span id="helpBlock" class="help-block"><button type="submit" class="btn btn-primary">设置</button></span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputType" class="col-sm-2 control-label">拍摄类型</label>                       
-                          <label>
-                            <input type="radio" class="minimal " name="optionsRadios"  value="option1" checked="">
-                            婚纱摄影
-                          </label>
-                          <label>
-                            <input type="radio" class="minimal col-sm-2" name="optionsRadios"  value="option2">
-                            旅行跟拍
-                          </label>
-                          <label>
-                            <input type="radio" class="minimal col-sm-2" name="optionsRadios"  value="option3">
-                            上门拍
-                          </label>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputService" class="col-sm-2 control-label">提供项目</label>
-                        <div class="col-sm-2 checkbox box-body">         
-                          <label>
-                            <input type="checkbox" class="minimal" checked/>
-                          </label>
-                            <span class="fa fa-fw fa-truck"></span>
-                            当地用车
-                          </label>               
-                          <label>
-                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option1" checked="">
-                              <span class="fa fa-fw fa-truck"></span>
-                            当地用车
-                          </label>
-                        </div>
-                        <div class="col-sm-2 checkbox">
-                          <label>
-                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
-                              <span class="fa fa-fw fa-female"></span>
-                            服装
-                          </label>
-                        </div>
-                        <div class="col-sm-2 checkbox">
-                          <label>
-                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
-                              <span class="fa fa-fw fa-video-camera"></span>
-                            视频
-                          </label>
-                        </div>
-                        <div class="col-sm-2 checkbox">
-                          <label>
-                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
-                              <span class="glyphicon glyphicon-scissors"></span>
-                            化妆造型
-                          </label>
-                        </div>
-                        <div class="col-sm-2 checkbox">
-                          <label>
-                            <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
-                              <span class="glyphicon glyphicon-bed"></span>
-                            酒店
-                          </label>
-                        </div>
-                        <div class="col-sm-2">
-                          <span id="helpBlock" class="help-block"><button type="submit" class="btn btn-primary">全选</button></span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputDate" class="col-sm-2 control-label">出生日期</label>
-                        <div class="col-sm-4">
-                          <input type="tel" class="form-control" id="inputDate"  placeholder="yyyy/mm/dd">
-                        </div>
-                        <div class="col-sm-5">
-                          <span id="helpBlock" class="help-block">非必填</span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputLocation" class="col-sm-2 control-label">所在地</label>
-                        <div class="col-sm-4">
-                          <input type="tel" class="form-control" id="inputLocation">
-                        </div>
-                        <div class="col-sm-5">
-                          <span id="helpBlock" class="help-block">所在地信息与摄影地关联  <span class="label label-danger">重要</span></span>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputMobile" class="col-sm-2 control-label">个人简介</label>
-                        <div class="col-sm-8">
-                          <textarea class="form-control" rows="4" placeholder="字数限制：***"></textarea>
-                        </div>
-                        <div class="col-sm-6 col-md-offset-3">
-                          <span id="helpBlock" class="help-block">请填写自我简述，将被客户查看</span>
-                        </div>
-                      </div>
-                    </form>
-                    <form class="form-inline" role="form">
-                      <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">保存</button>
-                      </div>
-                    </form>
+            <div class="col-xs-12 box box-primary lvpaizhe-a-info-padding">              
+              <!-- form start -->
+              <form class="form-horizontal"  role="form">
+                <!-- 标题 -->
+                <div class="form-group">
+                  <label for="inputGoodsTitle" class="col-sm-2 control-label">标题</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="inputGoodsTitle">
+                  </div>
+                  <div class="col-sm-6">
+                    <span id="helpBlock" class="help-block">限制30汉字或60字符</span>
                   </div>
                 </div>
-              </div>
-              </div><!-- /.box -->
+                <!-- 拍摄地 -->
+                <div class="form-group">
+                  <label for="inputPlace" class="col-sm-2 control-label">拍摄地</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="inputPlace" placeholder="此处为可输入的下拉框">
+                  </div>                        
+                </div>
+                <!-- 拍摄类型 -->
+                <!-- 问题：minimal属性未生效 -->
+                <div class="form-group">
+                  <label for="inputPhotoType" class="col-sm-2 control-label">拍摄类型</label>
+                  <div class="col-sm-4">
+                    <label>
+                      <input type="radio" class="minimal" name="optionsRadios"  value="option1" checked="">
+                      婚纱摄影
+                    </label>
+                    <label>
+                      <input type="radio" class="minimal" name="optionsRadios"  value="option2">
+                      旅行跟拍
+                    </label>
+                    <label>
+                      <input type="radio" class="minima" name="optionsRadios"  value="option3">
+                      上门拍
+                    </label>
+                  </div>
+                </div>
+                <!-- 提供项目 -->
+                <div class="form-group">
+                  <label for="inputService" class="col-sm-2 control-label">提供项目</label>
+                  <div class="col-sm-4">                   
+                    <label>
+                      <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option1" checked="">
+                        <span class="fa fa-fw fa-truck"></span>
+                      当地用车
+                    </label>
+                    <label>
+                      <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                        <span class="fa fa-fw fa-female"></span>
+                      服装
+                    </label>
+                    <label>
+                      <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                        <span class="fa fa-fw fa-video-camera"></span>
+                      视频
+                    </label>
+                    <label>
+                      <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                        <span class="glyphicon glyphicon-scissors"></span>
+                      化妆造型
+                    </label>
+                    <label>
+                      <input type="checkbox" class="minimal" name="optionsRadios" id="inputType" value="option2">
+                        <span class="glyphicon glyphicon-bed"></span>
+                      酒店
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <span id="helpBlock" class="help-block"><button type="submit" class="btn btn-primary">全选</button></span>
+                  </div>
+                </div>
+                <!-- 总价格 -->
+                <div class="form-group">
+                  <label for="inputTotalPrice" class="col-sm-2 control-label">总价格</label>
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" id="inputTotalPrice">                  
+                  </div>
+                  <div class="col-sm-2">
+                    <span id="helpBlock" class="help-block">元</span>
+                  </div>
+                </div>
+                <!-- 预付款 -->
+                <div class="form-group">
+                  <label for="inputAdvancePayment" class="col-sm-2 control-label">预付款</label>
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" id="inputAdvancePayment">
+                  </div>
+                  <div class="col-sm-2">
+                    <span id="helpBlock" class="help-block">元</span>
+                  </div>
+                </div>
+                <!-- 原片数量 -->
+                <div class="form-group">
+                  <label for="inputOriginalNum" class="col-sm-2 control-label">原片数量</label>
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" id="inputOriginalNum">
+                  </div>
+                  <div class="col-sm-5">
+                    <span id="helpBlock" class="help-block">张</span>
+                  </div>
+                </div>
+                <!-- 精修数量 -->
+                <div class="form-group">
+                  <label for="inputProcessingNum" class="col-sm-2 control-label">精修数量</label>
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" id="inputProcessingNum">
+                  </div>
+                  <div class="col-sm-5">
+                    <span id="helpBlock" class="help-block">张</span>
+                  </div>
+                </div>
+                <!-- 详细介绍 -->
+                <div class="form-group">
+                  <label for="inputGoodsDesc" class="col-sm-2 control-label">详细介绍</label>
+                  <div class="col-sm-8">
+                    <textarea id="inputGoodsDesc" class="form-control" rows="4" placeholder="此处应用富文本编辑器，字数限制：***"></textarea>
+                  </div>
+                </div>
+                <!-- 样片上传 -->
+                <div class="form-group">
+                  <label for="inputPic" class="col-sm-2 control-label">样片上传</label>
+                  <div class="col-sm-10">
+                    <img src="dist/img/user1-128x128.jpg">
+                    <img src="dist/img/user1-128x128.jpg">
+                    <img src="dist/img/user1-128x128.jpg">
+                    <img src="dist/img/user1-128x128.jpg">
+                    <img src="dist/img/user1-128x128.jpg">
+                  </div>                        
+                </div>
+                <div class="form-group">
+                  <div class="col-md-2 col-md-offset-2">
+                  <input type="file" id="exampleInputFile">
+                    <p class="help-block">选择样片上传，最多可上传20张</p>
+                  </div>
+                </div>
+              </form>
+              <form class="form-inline" role="form">
+                <div class="box-footer">
+                  <button type="button" class="btn btn-primary">预览</button>
+                  <button type="submit" class="btn btn-primary">保存</button>
+                </div>
+              </form>
+            <!-- /.box -->
             </div>
           </div>
         </section><!-- /.content -->
